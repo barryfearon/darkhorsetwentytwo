@@ -1,0 +1,50 @@
+@import '../global-styles/custom-bootstrap-variables';
+
+.backgroundImage {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  @include media-breakpoint-up(lg) {
+    opacity: 1;
+  }
+
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.dhHomepageContent {
+  height: 100%;
+}
+
+.wonderlandText {
+  > div {
+    width: 100% !important;
+    > img {
+      object-fit: contain;
+    }
+    > div {
+      > img {
+        width: 100% !important;
+      }
+    }
+  }
+}

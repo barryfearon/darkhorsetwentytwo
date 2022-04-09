@@ -1,0 +1,23 @@
+#System Files
+.DS_Store
+Thumbs.db
+
+#Lockfiles
+package-lock.json
+
+# Downloadable modules
+node_modules/
+
+# NextJS
+.next/
+out/
+
+# NPM logs
+npm-debug.log*
+debug.log*
+
+# Production build
+dist/
+
+# Local docker secrets
+secrets/

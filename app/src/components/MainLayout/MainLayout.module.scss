@@ -1,0 +1,12 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// By importing the custom bootstrap variables into modules, all bootstrap variables, functions  //
+// and mixins are available to the modules.                                                      //
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@import '../../global-styles/custom-bootstrap-variables';
+
+.mainContent {
+  background: #000000;
+}
+.mainContainer {
+  position: relative;
+}

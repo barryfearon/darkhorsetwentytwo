@@ -1,0 +1,77 @@
+@import './custom-bootstrap-variables';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Assistant&display=swap');
+
+body {
+  font-size: 0.9rem;
+  font-family: 'Assistant', sans-serif;
+  font-weight: 400;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.2rem;
+  }
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 8px #000000;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Alegreya', serif;
+}
+
+ol li {
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.dhLogo {
+  width: 296px;
+
+  @include media-breakpoint-up(lg) {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 155px;
+  }
+}
+
+.logoContainer {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  .artist-logo {
+    width: 200px;
+  }
+}
+
+.dh-content {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.card {
+  .card-title {
+    h2 {
+      text-shadow: 1px 1px 4px black;
+      text-align: center;
+    }
+  }
+}
+
+.hp-image-nav {
+  .card {
+    border-radius: 20px;
+    background: #000000;
+
+    .card-img {
+      border-radius: 20px;
+      opacity: 0.5;
+    }
+  }
+}

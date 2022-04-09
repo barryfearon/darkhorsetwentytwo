@@ -1,0 +1,16 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+// By importing the custom bootstrap variables into modules, all bootstrap variables, functions  //
+// and mixins are available to the modules.                                                      //
+///////////////////////////////////////////////////////////////////////////////////////////////////
+@import '../../global-styles/custom-bootstrap-variables';
+
+.MainNav {
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    right: 15px;
+  }
+}

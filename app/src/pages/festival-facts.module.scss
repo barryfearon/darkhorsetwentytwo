@@ -1,0 +1,23 @@
+@import '../global-styles/custom-bootstrap-variables';
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.5;
+
+  > div {
+    height: 100%;
+
+    > img {
+      object-fit: cover;
+      object-position: right;
+    }
+  }
+}
+
+.factsRow {
+  height: 100%;
+}
