@@ -1,0 +1,66 @@
+.MobileNavigationIcon {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 3;
+
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+  .menuOpenIcon {
+    &.menuActive {
+      width: 48px;
+      height: 48px;
+      position: relative;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      > svg {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+
+  .menuClosedIcon {
+    &.menuNotActive {
+      width: 48px;
+      height: 48px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > svg {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+}
+
+.MobileNavigationMenu {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  height: 100vh;
+  overflow: unset;
+  z-index: 2;
+
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
+
+  .MobileNavItems {
+    display: flex;
+    flex-direction: column;
+    > a {
+      margin: 1rem 0;
+    }
+  }
+}

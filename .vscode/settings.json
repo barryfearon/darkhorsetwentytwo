@@ -13,9 +13,8 @@
   "html.format.endWithNewline": true,
   "cSpell.language": "en-GB",
   "tslint.ignoreDefinitionFiles": false,
-  "cSpell.words": [
-    "lazyload",
-    "lazysizes",
-    "mixins"
-  ]
+  "cSpell.words": ["lazyload", "lazysizes", "mixins"],
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  }
 }
