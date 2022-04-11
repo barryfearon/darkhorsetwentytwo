@@ -11,6 +11,7 @@ export const MobileNavigation: React.FC = ({}) => {
     <>
       <section className={styles.MobileNavigationIcon}>
         <Button
+          // tslint:disable-next-line: jsx-no-lambda
           onClick={() => setMenuState(!menuActive)}
           className={`${styles.menuClosedIcon} ${
             !menuActive ? 'd-block' : 'd-none'
@@ -28,6 +29,7 @@ export const MobileNavigation: React.FC = ({}) => {
           </svg>
         </Button>
         <Button
+          // tslint:disable-next-line: jsx-no-lambda
           onClick={() => setMenuState(!menuActive)}
           className={`${styles.menuOpenIcon} ${!menuActive ? 'd-none' : 'd-block'} btn btn-link`}
         >
