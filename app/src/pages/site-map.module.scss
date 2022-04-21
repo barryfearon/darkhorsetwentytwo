@@ -1,0 +1,15 @@
+.sitemapContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  overflow: auto;
+  padding: 2rem 0;
+
+  @media screen and (min-width: 1754px) {
+    align-items: center;
+  }
+
+  .sitemapRow {
+    display: flex;
+  }
+}
