@@ -102,6 +102,26 @@ const Home: NextPage = () => (
         <Col lg={4} className='m-lg-5'>
           <Card className='text-white border m-2'>
             <Card.Img
+              src='https://res.cloudinary.com/dark-horse-music/image/upload/c_crop,h_525,w_786/v1650534652/sitemaps/twenty-two/google-map-website-thumb.png'
+              alt='Card image'
+            />
+            <Card.ImgOverlay className='d-flex flex-column justify-content-center align-items-center'>
+              <Card.Title>
+                <h2>Dark Horse Site Map</h2>
+              </Card.Title>
+              <Card.Text>
+                <Link href='/site-map'>
+                  <a className='btn btn-success stretched-link'>Find Out More</a>
+                </Link>
+              </Card.Text>
+            </Card.ImgOverlay>
+          </Card>
+        </Col>
+      </Row>
+      <Row className='justify-content-center hp-image-nav'>
+        <Col lg={4} className='m-lg-5'>
+          <Card className='text-white border m-2'>
+            <Card.Img
               src='https://res.cloudinary.com/dark-horse-music/image/upload/v1542923591/background%20images/art-black-and-white-clouds-906793.jpg'
               alt='Card image'
             />
@@ -111,7 +131,7 @@ const Home: NextPage = () => (
               </Card.Title>
               <Card.Text>
                 <Link href='/festival-facts'>
-                  <a className='btn btn-success stretched-link'>Find Out More</a>
+                  <a className='btn btn-danger stretched-link'>Find Out More</a>
                 </Link>
               </Card.Text>
             </Card.ImgOverlay>

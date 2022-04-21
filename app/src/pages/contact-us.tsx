@@ -1,9 +1,14 @@
 import { NextPage } from 'next'
-
+import Header from '../components/MainLayout/Header'
 import MainLayout from '../components/MainLayout/MainLayout'
 
 const Contact: NextPage = () => (
   <MainLayout siteTitle='Dark Horse Music - Isle of Man' pageTitle='Contact Us'>
+    <div className='backgroundImage'>
+      <img src='https://res.cloudinary.com/dark-horse-music/image/upload/v1645473638/background%20images/wonderland-bg.jpg' />
+    </div>
+
+    <Header siteLogo={''} />
     <div className='row justify-content-center vh-100'>
       <div className='col-sm-12 col-md-8 col-lg-4'>
         <h1 className='text-center text-white mb-4'>Contact Form</h1>
