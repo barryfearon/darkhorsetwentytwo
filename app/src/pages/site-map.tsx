@@ -1,76 +1,61 @@
 import { NextPage } from 'next'
+import Image from 'next/image'
+import { buildUrl, extractPublicId } from 'cloudinary-build-url'
 import { Row, Col } from 'react-bootstrap'
 import Header from '../components/MainLayout/Header'
 import MainLayout from '../components/MainLayout/MainLayout'
 
-import styles from './site-map.module.scss'
-
-const SiteMap: NextPage = () => (
-  <MainLayout siteTitle='Dark Horse Music - Isle of Man' pageTitle='SiteMap'>
-    <Header siteLogo={'false'} />
-    <div className={styles.sitemapContainer}>
-      <div className={styles.sitemapRow}>
-        <div className={styles.sitemapImage}>
-          <img
-            src='https://res.cloudinary.com/dark-horse-music/image/upload/v1650531108/sitemaps/twenty-two/dh-site-map-1.png'
-            style={{ width: '585px', height: '757px' }}
-          />
-        </div>
-        <div className={styles.sitemapImage}>
-          <img
-            src='https://res.cloudinary.com/dark-horse-music/image/upload/v1650531109/sitemaps/twenty-two/dh-site-map-2.png'
-            style={{ width: '585px', height: '757px' }}
-          />
-        </div>
-        <div className={styles.sitemapImage}>
-          <img
-            src='https://res.cloudinary.com/dark-horse-music/image/upload/v1650531109/sitemaps/twenty-two/dh-site-map-3.png'
-            style={{ width: '585px', height: '757px' }}
-          />
-        </div>
-      </div>
-      <div className={styles.sitemapRow}>
-        <div className={styles.sitemapImage}>
-          <img
-            src='https://res.cloudinary.com/dark-horse-music/image/upload/v1650531109/sitemaps/twenty-two/dh-site-map-4.png'
-            style={{ width: '585px', height: '757px' }}
-          />
-        </div>
-        <div className={styles.sitemapImage}>
-          <img
-            src='https://res.cloudinary.com/dark-horse-music/image/upload/v1650531109/sitemaps/twenty-two/dh-site-map-5.png'
-            style={{ width: '585px', height: '757px' }}
-          />
-        </div>
-        <div className={styles.sitemapImage}>
-          <img
-            src='https://res.cloudinary.com/dark-horse-music/image/upload/v1650531109/sitemaps/twenty-two/dh-site-map-6.png'
-            style={{ width: '585px', height: '757px' }}
-          />
-        </div>
-      </div>
-      <div className={styles.sitemapRow}>
-        <div className={styles.sitemapImage}>
-          <img
-            src='https://res.cloudinary.com/dark-horse-music/image/upload/v1650531109/sitemaps/twenty-two/dh-site-map-7.png'
-            style={{ width: '585px', height: '757px' }}
-          />
-        </div>
-        <div className={styles.sitemapImage}>
-          <img
-            src='https://res.cloudinary.com/dark-horse-music/image/upload/v1650531109/sitemaps/twenty-two/dh-site-map-8.png'
-            style={{ width: '585px', height: '757px' }}
-          />
-        </div>
-        <div className={styles.sitemapImage}>
-          <img
-            src='https://res.cloudinary.com/dark-horse-music/image/upload/v1650531109/sitemaps/twenty-two/dh-site-map-8-1.png'
-            style={{ width: '585px', height: '757px' }}
-          />
-        </div>
-      </div>
-    </div>
-  </MainLayout>
+const publicId = extractPublicId(
+  'https://res.cloudinary.com/dark-horse-music/image/upload/v1650621192/sitemaps/twenty-two/darkhorse-twenty-two-site-map-01.jpg'
 )
+
+const sm1 = buildUrl(publicId, {
+  cloud: {
+    cloudName: 'dark-horse-music'
+  }
+})
+
+const sm1Blur = buildUrl(publicId, {
+  cloud: {
+    cloudName: 'dark-horse-music'
+  },
+  transformations: {
+    rawTransformation: 'e_blur:2000,q_1'
+  }
+})
+
+const SiteMap: NextPage = () => {
+  return (
+    <>
+      <MainLayout siteTitle='Dark Horse Music - Isle of Man' pageTitle='SiteMap'>
+        <Header siteLogo={'false'} />
+        <div className='pt-4'>
+          <div
+            style={{
+              position: 'relative',
+              height: 0,
+              paddingTop: `${(2481 / 1755) * 100}%`,
+              backgroundImage: `url(${sm1Blur})`,
+              backgroundPosition: 'center center',
+              backgroundSize: `100%`
+            }}
+          >
+            <div
+              style={{
+                position: 'absolute',
+                top: '0',
+                left: '0',
+                right: '0',
+                bottom: '0'
+              }}
+            >
+              <Image src={sm1} width='1755' height='2481' />
+            </div>
+          </div>
+        </div>
+      </MainLayout>
+    </>
+  )
+}
 
 export default SiteMap

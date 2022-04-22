@@ -36,7 +36,7 @@ export const MainLayout: React.FC<IMainLayoutProps> = ({
         }}
       />
       <main className={`${styles.mainContent} bg-black text-white`}>
-        <Container fluid={true} className={`${styles.mainContainer}`}>
+        <Container fluid={true} className={`${styles.mainContainer} px-0`}>
           {children}
         </Container>
         <Footer siteLogo='' />

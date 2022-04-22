@@ -95,3 +95,9 @@ const nextConfig = {
 }
 
 module.exports = withOffline(nextConfig)
+
+module.exports = {
+  images: {
+    domains: ['res.cloudinary.com']
+  }
+}
