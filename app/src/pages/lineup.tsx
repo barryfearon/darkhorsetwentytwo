@@ -45,11 +45,11 @@ const Lineup: NextPage = () => (
               <div className='text-center mb-4'>
                 <div className='logoContainer'>
                   <img
-                    src='https://res.cloudinary.com/dark-horse-music/image/upload/v1646771028/bands%202022/Toucan_Party.jpg'
+                    src='https://via.placeholder.com/600x600/000000/ffffff/?text=logo-on-way-baby'
                     className='img-fluid artist-logo'
                   />
                 </div>
-                <h3>Toucan Party</h3>
+                <h3>Persian Doormats</h3>
               </div>
             </div>
           </div>
